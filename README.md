@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/thiagolocatelli/parse4j.svg?branch=master)](https://travis-ci.org/thiagolocatelli/parse4j)
+[![Build Status](https://travis-ci.org/dotweblabs/Parse-SDK-Java.svg?branch=master)](https://travis-ci.org/dotweblabs/Parse-SDK-Java)
 
-Parse4J - Java Library for [Parse](https://parse.com)
+Parse-SDK-Java - Java Library for [Parse](https://parse.com)
 ====================================
 
 Ths library is a non-official java library, but it works according to Parse's REST api specification.
@@ -45,9 +45,9 @@ Getting Started
     ...
     <dependencies>
         <dependency>
-            <groupId>com.github.thiagolocatelli</groupId>
-            <artifactId>parse4j</artifactId>
-            <version>1.4</version>
+            <groupId>org.parseplatform</groupId>
+            <artifactId>parse-sdk-java</artifactId>
+            <version>1.5-SNAPSHOT-Divroll</version>
         </dependency>
     </dependencies>
     ...

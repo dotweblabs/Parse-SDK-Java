@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.github.thiagolocatelli</groupId>
-	<artifactId>parse4j</artifactId>
-	<version>1.5-SNAPSHOT</version>
+	<groupId>org.parseplatform</groupId>
+	<artifactId>parse-sdk-java</artifactId>
+	<version>1.5-SNAPSHOT-Divroll</version>
 	<packaging>jar</packaging>
-	<name>parse4j</name>
-	<url>https://github.com/thiagolocatelli/parse4j</url>
+	<name>parse-sdk-java</name>
+	<url>https://github.com/dotweblabs/Parse-SDK-Java</url>
 
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
@@ -28,6 +28,11 @@
 			<name>Thiago Locatelli</name>
 			<email>thiago.locatelli@gmail.com</email>
 		</developer>
+		<developer>
+			<id>Parse-SDK-Java</id>
+			<name>Kerby Martino</name>
+			<email>kerbymart@gmail.com</email>
+		</developer>
 	</developers>
 
 	<contributors>
@@ -36,16 +41,16 @@
 	</contributors>
 
 	<scm>
-		<connection>scm:git:git@github.com:thiagolocatelli/parse4j.git</connection>
-		<developerConnection>scm:git:git@github.com:thiagolocatelli/parse4j.git</developerConnection>
-		<url>git@github.com:thiagolocatelli/parse4j.git</url>
+		<connection>scm:git:git@github.com:dotweblabs/Parse-SDK-Java.git</connection>
+		<developerConnection>scm:git:git@github.com:dotweblabs/Parse-SDK-Java.git</developerConnection>
+		<url>git@github.com:dotweblabs/Parse-SDK-Java.git</url>
 	</scm>
 
 	<properties>
 		<maven.test.skip>true</maven.test.skip>
 		<maven.test.failure.ignore>false</maven.test.failure.ignore>
 		<maven.test.error.ignore>false</maven.test.error.ignore>
-		<java.version>1.6</java.version>
+		<java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
@@ -56,7 +61,7 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.6.1</version>
+			<version>1.7.7</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>		
@@ -76,7 +81,7 @@
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
-			<version>20131018</version>
+			<version>20141113</version>
 		</dependency>
 
 		<dependency>
@@ -121,8 +126,8 @@
 					<version>3.1</version>
 					<configuration>
 						<encoding>UTF-8</encoding>
-						<source>1.6</source>
-						<target>1.6</target>
+						<source>1.8</source>
+						<target>1.8</target>
 					</configuration>
 				</plugin>
 			</plugins>
@@ -148,8 +153,8 @@
 							<version>3.1</version>
 							<configuration>
 								<encoding>UTF-8</encoding>
-								<source>1.6</source>
-								<target>1.6</target>
+								<source>1.8</source>
+								<target>1.8</target>
 							</configuration>
 						</plugin>
 						<plugin>
@@ -170,4 +175,11 @@
 			</build>
 		</profile>
 	</profiles>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>bintray-dotweblabs-parse</id>
+			<name>oss-jfrog-artifactory-snapshots</name>
+			<url>https://oss.jfrog.org/artifactory/oss-snapshot-local</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
